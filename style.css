@@ -1,0 +1,184 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background: #1E1E1E;
+}
+
+.container{
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: "Space Mono", monospace;
+  color: white;
+}
+
+.offScreenMenu{
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  height: 80vh;
+  width: 100%;
+  max-width: 350px;
+  position: fixed;
+  top: 0;
+  right: -450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1em;
+  transition: .3s ease;
+}
+
+.offScreenMenu.active{
+  right: 0;
+  margin-top: 4%;
+  margin-right: 30%;
+}
+
+.nav{
+  padding: 0.25em;
+  display: flex;
+}
+
+.menuText{
+  font-size: 0.75em;
+  max-width: 60%;
+}
+
+.hamMenu{
+  height: 50px;
+  width: 50px;
+  margin: auto;
+  position: relative;
+}
+
+.hamMenu span{
+  height: 4px;
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  position: absolute;
+  top: -30%;
+  left: 350%;
+  transform: translate(-50%, -50%);
+  transition: .2 ease;
+  cursor: pointer;
+}
+
+.hamMenu span:nth-child(1){
+  top: -70%;
+}
+
+.hamMenu span:nth-child(3){
+  top: -50%;
+}
+
+.hamMenu.active span:nth-child(1){
+  top: -20%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.hamMenu.active span:nth-child(2){
+  opacity: 0;
+}
+
+.hamMenu.active span:nth-child(3){
+  top: -20%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+.title{
+  border: 2px solid white;
+  border-radius: 18px;
+  display: block;
+  margin: 0.5em;
+}
+
+
+.pod{
+  border-radius: 28px;
+  height: 50em;
+  width: 400px ;
+  text-align: center;
+  padding: 0.7em 0.7em;
+  background: black;
+  overflow: auto;
+}
+
+
+img{
+  display: block;
+  margin: 0 auto;
+
+  max-height: 450px;
+  max-width: 350px;
+  border-radius: 20px;
+}
+
+.date{
+  padding: .65em;
+  margin: 1em;
+}
+
+button{
+  padding: 0.5em 0.75em;
+  border-radius: 15px;
+}
+
+body{
+  text-align: center;
+  height: 100vh;
+}
+
+h1,h2 {
+  font-size: 1.5em;
+  max-width: 60%;
+  margin: auto;
+}
+
+h2{
+  padding-top: 1em;
+}
+
+p{
+  font-size: 1em;
+  text-align: center;
+  color: white;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  width: 350px;
+  padding: 1em;
+  border-radius: 15px;
+}
+
+.getPod{
+  border: 2px solid white;
+  border-radius: 18px;
+  padding: 0.25em 0.55em;
+  margin: 2em auto;
+  cursor: pointer;
+}
+
+
+.getPod:hover{
+  background: white;
+  color: black;
+}
+
+.hidden{
+  display: none;
+}
+
+
+.date{
+  color-scheme: dark;
+}
+
